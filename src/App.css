@@ -2,16 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
   background-color: #282c34;
@@ -24,15 +14,94 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+body {
+  font-family: 'Encode Sans Semi Condensed', sans-serif;
+  background-color: #5cea9c;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title {
+  margin: 2% 0 4% 0;
+  color: rgb(248, 61, 123);
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-align: center;
+  display: block;
 }
+
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+@media (max-width: 994px) {
+    .title {
+      margin: 10% 5%;
+    }
+
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #editor {
+      padding: 2%;
+      margin: 5% 0;
+      width: 70%
+    }
+
+    #preview {
+      padding: 2%;
+      width: 70%;
+      margin: 5% 0;
+    }
+}
+
+#editor {
+  width: 30%;
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 5%;
+  background-color: #c7c7c7;
+  -webkit-box-shadow: 0px 0px 0px 5px rgb(64, 61, 248); 
+  box-shadow: 0px 0px 0px 5px rgb(64, 61, 248);
+  font-size: 1rem;
+  min-height: 300px;
+}
+
+#editor:focus {
+  -webkit-box-shadow: 0px 0px 0px 5px rgb(249, 252, 88); 
+  box-shadow: 0px 0px 0px 5px rgb(249, 252, 88);
+  background-color: #E6E6E6;
+  border-color: rgb(249, 252, 88);
+}
+
+
+#preview {
+  width: 40%;
+  border-radius: 5px;
+  padding: 1%;
+  margin-bottom: 5%;
+  background-color: #E6E6E6;
+  -webkit-box-shadow: 0px 0px 0px 5px rgb(219, 88, 252); 
+  box-shadow: 0px 0px 0px 5px rgb(219, 88, 252);
+  font-size: 1rem;
+  min-height: 300px;
+  word-wrap: break-word;
+}
+
+img {
+  max-width: 70%;
+  max-height: 70%;
+}
+
+pre, code {
+  background-color: #ffffff;
+  white-space : pre-wrap !important;
+}
+
+
+
